@@ -33,7 +33,7 @@ namespace ariel
         return snowmanAssemble(id);
     }
 
-    //checks if the snowman is valid, meaning:
+    //Checks if the snowman is valid, meaning:
     //if the number's length is exactly 8 digits
     //and each digit is in range of 1-4
     bool validSnowman(int num)
@@ -41,13 +41,13 @@ namespace ariel
         return inRange(num) && validLength(num);
     }
 
-    //checks if the length of the number is valid
+    //Checks if the number's length is valid
     bool validLength(int num)
     {
         return ((int)log10(num)) + 1 == MAX_LENGTH;
     }
 
-    //checks if each digit is in range between 1-4
+    //Checks if each digit is in range between 1-4
     bool inRange(int num)
     {
         if (num < 1)
@@ -67,6 +67,7 @@ namespace ariel
         return true;
     }
 
+    //Get the reversed number
     array<int, MAX_LENGTH> snowmanID(int num)
     {
         array<int, MAX_LENGTH> id = {0, 0, 0, 0, 0, 0, 0, 0};
@@ -77,6 +78,18 @@ namespace ariel
         }
         return id;
     }
+
+    // string getParts(int num, array<string,TYPES> arr)
+    // {
+    //     for (int i = 1; i <= TYPES; i++)
+    //     {
+    //         if (num == i)
+    //         {
+    //             return "" + arr.at(i - 1);
+    //         }
+    //     }
+    //     return "";
+    // }
 
     string hat(int num)
     {

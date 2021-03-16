@@ -24,6 +24,14 @@ using namespace std;
  * 6. Y is for Right Arm
  * 7. T is for Torso
  * 8. B is for Base
+ * 
+ * Output:
+ * 
+ *  HHHHH
+ *  HHHHH
+ * X(LNR)Y
+ * X(TTT)Y
+ *  (BBB)
  */
 
 string nospaces(string input)
