@@ -1,5 +1,5 @@
 #include "snowman.hpp"
-//check
+
 using namespace std;
 
 const array<string, TYPES> hats = {" _===_ ", "  ___  \n ..... ", "   _   \n  /_\\  ", "  ___  \n (_*_) "};
