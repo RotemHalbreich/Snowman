@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Arrays holding the snowman's parts by types in a fixed order
 const array<string, TYPES> hats = {" _===_ ", "  ___  \n ..... ", "   _   \n  /_\\  ", "  ___  \n (_*_) "};
 const array<string, TYPES> noses = {",", ".", "_", " "};
 
@@ -20,6 +21,7 @@ const array<string, TYPES> bases = {" ( : ) ", " (\" \") ", " (___) ", " (   ) "
 namespace ariel
 {
 
+    //Returns a valid snowman as a string
     string snowman(int num)
     {
         if (!validSnowman(num))
@@ -206,6 +208,7 @@ namespace ariel
         return "" + leftUpperArm(X_Upper) + leftEye(L) + nose(N) + rightEye(R) + rightUpperArm(Y_Upper);
     }
 
+    //Concatenating the snowman's parts together
     string snowmanAssemble(array<int, MAX_LENGTH> id)
     {
         string hisHat = hat(id[H - 1]);
