@@ -1,4 +1,8 @@
 #include "snowman.hpp"
+#include <iostream>
+#include <string>
+#include <array>
+#include <math.h>
 
 using namespace std;
 

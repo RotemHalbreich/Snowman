@@ -1,9 +1,6 @@
 #pragma once
-#include <iostream>
 #include <string>
 #include <array>
-#include <math.h>
-#include <stdexcept>
 
 /**
  * {H,N,L,R,X,Y,T,B} -> Snowman's ID
