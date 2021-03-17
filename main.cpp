@@ -3,6 +3,9 @@
 using namespace std;
 
 /**
+ * AUTHORS: Rotem Halbreich
+ * 
+ * 
  * {H,N,L,R,X,Y,T,B} -> Snowman's ID
  * 
  * 1. H is for Hat
@@ -38,7 +41,7 @@ int main()
         cout << "Pick a valid Snowman's ID: " << endl;
         cin >> num;
         cout << "" << endl;
-    
+
         if (num < 0)
         {
             cout << "You've inserted an invalid ID, please try again! " << endl;

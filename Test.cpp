@@ -72,7 +72,8 @@ TEST_CASE("Invalid digit, not in range 1-4")
     CHECK_THROWS(snowman(11111119));
 }
 
-TEST_CASE("Negative number") {
+TEST_CASE("Negative number")
+{
     CHECK_THROWS(snowman(-12312312));
     CHECK_THROWS(snowman(-1234322));
     CHECK_THROWS(snowman(-123421));
@@ -83,7 +84,8 @@ TEST_CASE("Negative number") {
     CHECK_THROWS(snowman(-1));
 }
 
-TEST_CASE("Input Zero") {
+TEST_CASE("Input Zero")
+{
     CHECK_THROWS(snowman(123422130));
     CHECK_THROWS(snowman(012342213));
     CHECK_THROWS(snowman(00000000));
@@ -96,65 +98,73 @@ TEST_CASE("Input Zero") {
     CHECK_THROWS(snowman(0));
 }
 
-TEST_CASE("Basic snowman") {
+TEST_CASE("Basic snowman")
+{
 
     CHECK(nospaces(snowman(11111111)) == nospaces("       \n _===_ \n (.,.) \n<( : )>\n ( : ) \n"));
 }
- 
-TEST_CASE("Checking snowman's Hat") {
+
+TEST_CASE("Checking snowman's Hat")
+{
 
     CHECK(nospaces(snowman(21111111)) == nospaces("  ___  \n ..... \n (.,.) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(31111111)) == nospaces("   _   \n  /_\\  \n (.,.) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(41111111)) == nospaces("  ___  \n (_*_) \n (.,.) \n<( : )>\n ( : ) \n"));
 }
 
-                  
-TEST_CASE("Checking snowman's Nose/Mouth") {
+TEST_CASE("Checking snowman's Nose/Mouth")
+{
 
     CHECK(nospaces(snowman(12111111)) == nospaces("       \n _===_ \n (...) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(13111111)) == nospaces("       \n _===_ \n (._.) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(14111111)) == nospaces("       \n _===_ \n (. .) \n<( : )>\n ( : ) \n"));
 }
-                   
-TEST_CASE("Checking snowman's Left Eye") {
+
+TEST_CASE("Checking snowman's Left Eye")
+{
 
     CHECK(nospaces(snowman(11211111)) == nospaces("       \n _===_ \n (o,.) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(11311111)) == nospaces("       \n _===_ \n (O,.) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(11411111)) == nospaces("       \n _===_ \n (-,.) \n<( : )>\n ( : ) \n"));
 }
 
-TEST_CASE("Checking snowman's Right Eye") {
+TEST_CASE("Checking snowman's Right Eye")
+{
 
     CHECK(nospaces(snowman(11121111)) == nospaces("       \n _===_ \n (.,o) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(11131111)) == nospaces("       \n _===_ \n (.,O) \n<( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(11141111)) == nospaces("       \n _===_ \n (.,-) \n<( : )>\n ( : ) \n"));
 }
 
-                        
-TEST_CASE("Checking snowman's Left Arm") {
- 
+TEST_CASE("Checking snowman's Left Arm")
+{
+
     CHECK(nospaces(snowman(11112111)) == nospaces("       \n _===_ \n\\(.,.) \n ( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(11113111)) == nospaces("       \n _===_ \n (.,.) \n/( : )>\n ( : ) \n"));
     CHECK(nospaces(snowman(11114111)) == nospaces("       \n _===_ \n (.,.) \n ( : )>\n ( : ) \n"));
 }
 
-TEST_CASE("Checking snowman's Right Arm") {
-                  
+TEST_CASE("Checking snowman's Right Arm")
+{
+
     CHECK(nospaces(snowman(11111211)) == nospaces("       \n _===_ \n (.,.)/\n<( : ) \n ( : ) \n"));
     CHECK(nospaces(snowman(11111311)) == nospaces("       \n _===_ \n (.,.) \n<( : )\\\n ( : ) \n"));
     CHECK(nospaces(snowman(11111411)) == nospaces("       \n _===_ \n (.,.) \n<( : ) \n ( : ) \n"));
 }
-                              
-TEST_CASE("Checking snowman's Torso") {
+
+TEST_CASE("Checking snowman's Torso")
+{
 
     CHECK(nospaces(snowman(11111121)) == nospaces("       \n _===_ \n (.,.) \n<(] [)>\n ( : ) \n"));
     CHECK(nospaces(snowman(11111131)) == nospaces("       \n _===_ \n (.,.) \n<(> <)>\n ( : ) \n"));
     CHECK(nospaces(snowman(11111141)) == nospaces("       \n _===_ \n (.,.) \n<(   )>\n ( : ) \n"));
 }
 
-TEST_CASE("Checking snowman's Base") {
+TEST_CASE("Checking snowman's Base")
+{
 
-    CHECK(nospaces(snowman(11111112)) == nospaces("     \n_===_\n (.,.) \n<( : )>\n (" ") \n"));
+    CHECK(nospaces(snowman(11111112)) == nospaces("     \n_===_\n (.,.) \n<( : )>\n ("
+                                                  ") \n"));
     CHECK(nospaces(snowman(11111113)) == nospaces("     \n_===_\n (.,.) \n<( : )>\n (___) \n"));
     CHECK(nospaces(snowman(11111114)) == nospaces("     \n_===_\n (.,.) \n<( : )>\n (   ) \n"));
 }

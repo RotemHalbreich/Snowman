@@ -16,7 +16,16 @@
  * 6. Y is for Right Arm
  * 7. T is for Torso
  * 8. B is for Base
+ * 
+ * Output:
+ * 
+ *  HHHHH
+ *  HHHHH
+ * X(LNR)Y
+ * X(TTT)Y
+ *  (BBB)
  */
+
 const int MAX_LENGTH = 8, MAX_DIGIT = 4, MIN_DIGIT = 1, TYPES = 4, BASE = 10;
 const int H = 1, N = 2, L = 3, R = 4, X = 5, Y = 6, T = 7, B = 8;
 
@@ -30,5 +39,5 @@ namespace ariel
     std::string torsoWithArms(int X, int T, int Y);
     std::string faceWithArms(int X_Upper, int L, int N, int R, int Y_Upper);
     std::string snowmanAssemble(std::array<int, MAX_LENGTH> id);
-    std::string getParts(int num, std::array<std::string,TYPES> arr);
+    std::string getParts(int num, std::array<std::string, TYPES> arr);
 };
